@@ -25,8 +25,7 @@ class ListaPaises extends LitElement {
     paises: { type: Array }
   };
 
-  async connectedCallback() {
-    super.connectedCallback();
+  async firstUpdated() {
     const res = await fetch('https://restcountries.com/v3.1/region/america');
     this.paises = await res.json();
   }
