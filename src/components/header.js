@@ -9,26 +9,24 @@ class Headerreto extends LitElement {
       text-align: center;
     }
 
-    h1,
     p {
       margin: 0;
     }
   `;
 
   static properties = {
-    titulo: { type: String }
+    descripcion: { type: String }
   };
 
   constructor() {
     super();
-    this.titulo = "Países De América";
+    this.descripcion = "Información de países, capitales y población";
   }
 
   render() {
     return html`
       <header>
-        <h1>${this.titulo}</h1>
-        <p>Información de países, capitales y población</p>
+        <p>${this.descripcion}</p>
       </header>
     `;
   }

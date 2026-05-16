@@ -2,15 +2,27 @@ import { LitElement, html, css } from 'lit';
 
 class TopReto extends LitElement {
   static styles = css `
-   :host {
-    display: block;
-    height: 30px;
-    background-color: #c61a1a;
-   }
+    h1 {
+      background-color: #cb0a0a;
+      margin: 0;
+      padding: 5px;
+      color: white;
+      text-align: center;
+    }
   `;
-  
+
+  static properties = {
+    titulo: { type: String }
+  };
+
+  constructor() {
+    super();
+    this.titulo = "Países De América";
+  }
   render() {
-    return html``;
+    return html`
+      <h1>${this.titulo}</h1>
+    `;
   }
 }
 
