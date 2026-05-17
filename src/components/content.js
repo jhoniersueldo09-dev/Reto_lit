@@ -6,7 +6,7 @@ class ContentReto extends LitElement {
     :host {
       padding: 40px 20px;
       display: flex;
-      justify-content: center;
+      justify-content: center; 
     }
 
     .content-piola {

@@ -21,13 +21,29 @@ class ListaPaises extends LitElement {
       object-fit: contain;
     }
 
+    button {
+     cursor: pointer;
+    }
+  
     h3 {
      cursor: pointer;
-     transition: 0.3s;
+     transition: 0.5s;
     }
 
     h3:hover {
      color: #0ba920;
+    }
+
+    h2 {
+     margin-top: 20px;
+     text-align: center;
+    }
+
+   .favoritos {
+     border: 1px solid #ccc;
+     padding: 10px;
+     margin-bottom: 20px;
+     border-radius: 10px;
     }
   `;
 
@@ -78,6 +94,11 @@ class ListaPaises extends LitElement {
     );
 
     return html`
+      <h2>Paises Favoritos</h2>
+
+      <div class="favoritos">
+        ${this.favoritos.length > 0 ? this.favoritos.join(", ") : "No hay favoritos seleccionados"}
+      </div>
       <div class="grid">
         ${seleccionados.map(pais => html`
           <div class="card">
@@ -86,7 +107,7 @@ class ListaPaises extends LitElement {
               ${pais.name.common}
             </h3>
             <button @click=${() => this.toggleFavorito(pais.name.common)}>
-              ${this.favoritos.includes(pais.name.common) ? "Quitar de favoritos" : "Agregar a favoritos"}
+              ${this.favoritos.includes(pais.name.common) ? "Quitar de favoritos :(" : "Agregar a favoritos :)"}
             </button>
           </div>
         `)}
