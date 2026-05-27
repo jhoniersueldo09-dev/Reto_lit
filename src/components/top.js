@@ -2,7 +2,7 @@ import { LitElement, html, css } from 'lit';
 
 class TopReto extends LitElement {
   static styles = css `
-    h1 {
+    .top {
       background-color: #cb0a0a;
       margin: 0;
       padding: 5px;
@@ -12,7 +12,7 @@ class TopReto extends LitElement {
   `;
 
   static properties = {
-    titulo: { type: String }
+    titulo: {type: String}
   };
 
   constructor() {
@@ -21,7 +21,9 @@ class TopReto extends LitElement {
   }
   render() {
     return html`
+    <div class="top">
       <h1>${this.titulo}</h1>
+    </div>    
     `;
   }
 }

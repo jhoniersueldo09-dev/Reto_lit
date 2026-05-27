@@ -75,9 +75,7 @@ class ListaPaises extends LitElement {
       fav => fav !== nombre);
     } 
     else {
-    this.favoritos = [
-      ...this.favoritos,
-      nombre];
+      this.favoritos = this.favoritos.concat(nombre);
     }
   }
 

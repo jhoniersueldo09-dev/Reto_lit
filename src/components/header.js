@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 
-class Headerreto extends LitElement { 
+class HeaderReto extends LitElement { 
   static styles = css`
     header {
       background-color: #000c5c;
@@ -15,21 +15,21 @@ class Headerreto extends LitElement {
   `;
 
   static properties = {
-    descripcion: { type: String }
+    top: { type: String }
   };
 
   constructor() {
     super();
-    this.descripcion = "Información de países, capitales y población";
+    this.top = "Información de países, capitales y población";
   }
 
   render() {
     return html`
       <header>
-        <p>${this.descripcion}</p>
+        <p>${this.top}</p>
       </header>
     `;
   }
 }
 
-customElements.define('header-reto', Headerreto);
+customElements.define('header-reto', HeaderReto);
